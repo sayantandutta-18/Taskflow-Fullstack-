@@ -1,0 +1,6 @@
+{
+  "name": "TaskFlow",
+  "description": "A premium, high-performance task management and project workspace optimizer featuring analytics, calendar views, and dynamic focus settings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
