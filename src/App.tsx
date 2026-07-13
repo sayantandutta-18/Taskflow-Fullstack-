@@ -13,7 +13,6 @@ import {
   User, 
   LogOut, 
   EyeOff, 
-  Eye, 
   Menu, 
   X,
   Sparkles,
