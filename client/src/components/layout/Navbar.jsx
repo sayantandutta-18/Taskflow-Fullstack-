@@ -51,7 +51,6 @@ function Navbar() {
 
       {/* Buttons */}
       <div className="flex gap-3">
-
         <button
           onClick={() => navigate("/login")}
           className="border border-slate-600 px-5 py-2 rounded-lg hover:bg-slate-800 transition-all duration-300 hover:scale-105"
@@ -72,7 +71,6 @@ function Navbar() {
         >
           Logout
         </button>
-
       </div>
     </nav>
   );

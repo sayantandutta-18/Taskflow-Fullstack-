@@ -168,7 +168,6 @@ const visibleTasks = tasks.filter((task) => {
       });
 
       console.log("Fetched Tasks:", res.data);
-
       setTasks(res.data);
     } catch (err) {
       console.error("Fetch Tasks Error:", err);
@@ -258,23 +257,28 @@ const visibleTasks = tasks.filter((task) => {
     } catch (err) {
       console.error("Delete Error:", err);
     }
-  }; 
+  };
 
-// Archive Task
-
+  // ==============================
+  // Archive Task
+  // ==============================
   const handleArchive = async (id) => {
-  try {
-    await api.patch(`/tasks/${id}/archive`, {}, {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-      },
-    });
+    try {
+      await api.patch(
+        `/tasks/${id}/archive`,
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      fetchTasks();
+    } catch (err) {
+      console.error("Archive Error:", err);
+    }
+  };
 
-    fetchTasks();
-  } catch (err) {
-    console.error("Archive Error:", err);
-  }
-};
 
   // ==============================
   // Change Task Status
@@ -719,7 +723,6 @@ const visibleTasks = tasks.filter((task) => {
         )}
 
       </div>
-
     </MainLayout>
   );
 }
