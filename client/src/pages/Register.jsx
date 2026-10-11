@@ -52,10 +52,15 @@ function Register() {
       console.error("========== REGISTER ERROR ==========", err);
 
       if (err.response) {
-        setErrorMessage(err.response.data?.message || "Registration failed");
+        setErrorMessage(
+          err.response.data?.message ||
+          (err.response.status === 404
+            ? "API route not found. Please verify backend URL."
+            : "Registration failed. Please try again.")
+        );
       } else if (err.request) {
         setErrorMessage(
-          "Cannot connect to the backend server (port 5000).\nMake sure Express server is running with: cd backend && npm run dev"
+          "Cannot connect to the backend server. If using Render, the free instance may take ~30-40 seconds to wake up. Please wait a moment and try again."
         );
       } else {
         setErrorMessage(err.message || "An unexpected error occurred.");

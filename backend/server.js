@@ -20,9 +20,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Routes with /api prefix
 app.use("/api/auth", authRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use("/api/ai", aiRoutes);
+
+// Fallback routes without /api prefix
+app.use("/auth", authRoutes);
+app.use("/tasks", taskRoutes);
+app.use("/ai", aiRoutes);
 
 app.get("/", (req, res) => {
   res.send("Taskflow API Running...");
