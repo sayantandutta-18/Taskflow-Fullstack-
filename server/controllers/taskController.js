@@ -113,3 +113,34 @@ export const deleteTask = async (req, res) => {
         });
     }
 }
+// ==============================
+// Archive Task
+// ==============================
+export const archiveTask = async (req, res) => {
+    try {
+        const task = await Task.findOne({
+            _id: req.params.id,
+            user: req.user.id,
+        });
+
+        if (!task) {
+            return res.status(404).json({
+                message: "Task not found",
+            });
+        }
+
+        task.archived = true;
+
+        await task.save();
+
+        res.status(200).json({
+            message: "Task archived successfully",
+            task,
+        });
+
+    } catch (error) {
+        res.status(500).json({
+            message: error.message,
+        });
+    }
+};

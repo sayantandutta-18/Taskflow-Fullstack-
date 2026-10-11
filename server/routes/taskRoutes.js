@@ -4,6 +4,7 @@ import {
     getTasks,
     updateTask,
     deleteTask,
+    archiveTask,
 } from "../controllers/taskController.js";
 
 
@@ -15,5 +16,5 @@ router.post("/", protect, createTask);
 router.get("/", protect, getTasks);
 router.put("/:id", protect, updateTask);
 router.delete("/:id", protect, deleteTask);
-
+router.patch("/:id/archive", protect, archiveTask);
 export default router;
