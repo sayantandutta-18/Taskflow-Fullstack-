@@ -2,381 +2,247 @@
 
 ### ✨ Plan Smarter. Focus Deeper. Achieve More.
 
-**TaskFlow AI** is a next-generation, full-stack productivity platform that combines intelligent task management, immersive 3D visuals, AI-powered planning, gamification, and focus tools into one seamless experience.
+**TaskFlow AI** is a modern full-stack productivity and task management platform designed to help users organize tasks, manage priorities, track progress, and improve productivity through an intuitive interface.
 
-Built with the MERN ecosystem, TaskFlow AI transforms everyday productivity into an engaging experience through an interactive Three.js Productivity Orb, automated task breakdowns, recurring workflows, real-time insights, a Pomodoro Focus Room, and a Mini-Games Arcade.
+🌐 **Live Demo:** [Open TaskFlow AI](https://taskflow-fullstack-lac-iota.vercel.app/)
 
----
+⚙️ **Backend API:** [View Backend](https://taskflow-fullstack-2.onrender.com)
 
-## 🌌 Experience TaskFlow AI
-
-🎯 **Manage tasks intelligently.**  
-🤖 **Break complex goals into actionable steps.**  
-🎮 **Make productivity more engaging.**  
-⏱️ **Stay focused with structured work sessions.**  
-📊 **Track progress with meaningful insights.**
-
-> Your personal productivity workspace — powered by intelligent workflows, immersive visuals, and rewarding progress.
+💻 **GitHub Repository:** [TaskFlow Fullstack](https://github.com/sayantandutta-18/Taskflow-Fullstack-)
 
 ---
+
+## 🌟 Project Overview
+
+TaskFlow AI brings task management and productivity tools together in one place. Built with modern web technologies, it combines a responsive React frontend with a Node.js and Express backend, supported by MongoDB for data storage.
+
+The project focuses on a smooth user experience, secure authentication, organized task workflows, and a foundation for AI-powered productivity features.
 
 ## ✨ Key Features
 
-### 🌐 1. Immersive 3D Productivity Experience
+### 📋 Smart Task Management
+- Create, view, update, and delete tasks.
+- Organize tasks by priority and category.
+- Search and sort tasks for easier navigation.
+- Track task status and due dates.
+- Archive tasks to keep the active workspace organized.
 
-Bring your productivity dashboard to life with an interactive Three.js experience.
+### 🔐 Authentication & Security
+- User registration and login.
+- JWT-based authentication.
+- Protected API requests.
+- Password hashing with bcryptjs.
+- Environment-based configuration for sensitive credentials.
 
-- 🔮 **Interactive Productivity Orb** featuring rotating torus rings, orbiting node cubes, and ambient particles.
-- 🖱️ Dynamic mouse-based parallax effects for an immersive visual experience.
-- ⚡ Lazy-loaded 3D scenes using React Suspense.
-- 🚀 Optimized rendering with device pixel ratio capped at `1.5`.
-- 🧹 Automatic WebGL resource cleanup when components unmount.
-- ♿ Accessible HTML headings, metrics, and buttons remain separate from the 3D canvas.
-- 🌱 Lightweight CSS fallback for unsupported WebGL environments and reduced-motion preferences.
+### 📊 Productivity Tracking
+- Monitor task status and completion.
+- Organize work according to priority.
+- Keep tasks structured in a centralized dashboard.
 
-### ⚡ 2. Complete Task Management System
-
-Manage everyday responsibilities through a flexible task lifecycle.
-
-- ✅ Create, edit, complete, archive, and restore tasks.
-- 🧩 Add, toggle, and remove subtasks directly from task cards.
-- 🔁 Automatically reschedule daily, weekly, and monthly recurring tasks.
-- 📝 Expandable notes for links, requirements, and additional context.
-- 🎯 Set priorities and organize tasks by category.
-- 🔍 Search, filter, and sort tasks in real time.
-- 📅 Manage deadlines and identify overdue tasks.
-- 📋 Use built-in templates for study sessions, feature sprints, daily wellness, and budget audits.
-
-**Available sorting options:** Latest, Oldest, Priority, and Due Date.
-
-### 🤖 3. AI-Powered Task Assistant
-
-Turn complicated tasks into manageable action plans.
-
-- 🧠 **Smart Task Breakdown:** Generate actionable 3–4-step subtask suggestions from a task title and description.
-- 🎯 **Priority Suggestions:** Get recommendations for task priority.
-- 💡 **Productivity Tips:** Receive practical suggestions for approaching tasks.
-- 🗓️ **Daily Planning:** Organize pending tasks into Top Priorities, Secondary Tasks, and Quick Wins.
-- 🔌 **Dual-Engine Architecture:** Optional server-side Google Gemini integration with a heuristic fallback engine when the external AI service is unavailable.
-
-The fallback engine is designed to keep core planning assistance available without requiring an external AI API key.
-
-### 🏆 4. Gamification & Achievement System
-
-Make consistent progress more rewarding.
-
-- ✨ Earn **10 XP** for completing a task.
-- 🔥 Earn an additional **5 XP** for high-priority tasks.
-- 🧩 Earn an additional **5 XP** for completing all subtasks.
-- 📈 Progress through levels as XP accumulates.
-- 🔥 Track consecutive-day productivity streaks.
-- 🏅 Unlock achievements stored in MongoDB.
-
-**Achievement collection:**
-
-- 🌱 Novice Achiever
-- 🚀 Momentum Builder
-- 🌊 Flow Master
-- ⬆️ Level Up
-- 💯 Century Club
-
-🛡️ The reward system is designed to prevent duplicate XP awards for repeated completion requests.
-
-### 🎮 5. Mini-Games Arcade
-
-Take a short break with interactive games inside TaskFlow AI.
-
-| Game | Experience |
-|---|---|
-| 🧠 Memory Match | Match pairs while tracking moves and elapsed time. |
-| 🔢 2048 | Merge number tiles using keyboard arrows or mobile touch gestures. |
-| ❌ Tic-Tac-Toe | Play locally with another person or challenge the computer. |
-| ⚡ Reaction Challenge | Test reaction speed with millisecond timing and false-start detection. |
-
-Designed to make the application more engaging without interfering with the main task-management workflow.
-
-### ⏱️ 6. Focus Room & Pomodoro Timer
-
-Build better work habits with structured focus sessions.
-
-- 🎯 Focus Session — **25 minutes**
-- ☕ Short Break — **5 minutes**
-- 🌿 Long Break — **15 minutes**
-- 🔄 Configurable timer controls.
-- 🔔 Optional Web Audio API chime notifications.
-- 📊 Session counter and active-task selector.
-
-Use focused work intervals to reduce distractions and organize breaks throughout the day.
-
-### 📊 7. Analytics & Productivity Insights
-
-Understand your progress through data-backed statistics.
-
-- 📌 Active task count.
-- ✅ Completed task count.
-- ⏰ Overdue task count.
-- 📈 Completion rate percentage.
-- 🎯 Priority distribution.
-- 🗂️ Category breakdown.
-- 🌱 Helpful empty states for new accounts.
-
-Analytics are intended to reflect actual database records rather than hardcoded demonstration statistics.
-
-### 📅 8. Interactive Calendar
-
-Visualize upcoming work and manage deadlines from a calendar interface.
-
-- 🗓️ Monthly calendar grid.
-- 🎨 Priority-coded task indicators.
-- 🔍 View tasks scheduled for specific dates.
-- 📝 Open task details through interactive modals.
-- ⏰ Track upcoming deadlines and overdue work.
-
----
+### 🎨 Modern User Interface
+- React-powered component architecture.
+- Responsive interface for different screen sizes.
+- Lucide React icons.
+- Tailwind CSS styling.
+- Three.js support for interactive 3D experiences.
 
 ## 🛠️ Tech Stack
 
-### 🎨 Frontend
-
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-3D-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
-
-- React
-- Vite
-- Tailwind CSS
-- Three.js
-- React Three Fiber / Drei, where used in the implementation
-- Axios
-- Recharts, where used for analytics
-
-### ⚙️ Backend
-
-![Node.js](https://img.shields.io/badge/Node.js-Runtime-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-5-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-
-- Node.js
-- Express.js
-- MongoDB Atlas
-- Mongoose
-- JWT authentication
-- Password hashing
-- Protected API routes
-
-### 🤖 AI & Browser APIs
-
-- Google Gemini API — optional external AI integration.
-- Heuristic fallback engine — rule-based task planning.
-- Web Audio API — optional focus timer chimes.
-- WebGL / Three.js — interactive 3D rendering.
-
----
+| Technology | Purpose |
+|---|---|
+| ⚛️ React | Frontend UI |
+| ⚡ Vite | Development server and production build |
+| 🎨 Tailwind CSS | Styling and responsive layouts |
+| 🌌 Three.js | 3D graphics |
+| 🟢 Node.js | Backend runtime |
+| 🚀 Express.js | REST API |
+| 🍃 MongoDB | Database |
+| 🦫 Mongoose | MongoDB object modeling |
+| 🔑 JWT | Authentication |
+| 🔒 bcryptjs | Password hashing |
+| 📡 Axios | Frontend API requests |
+| 🎯 Lucide React | Icons |
 
 ## 🏗️ Project Architecture
 
 ```text
-Taskflow-AI/
+TaskFlow-Fullstack/
 │
-├── client/                         # React + Vite frontend
-│   └── src/
-│       ├── components/
-│       │   ├── three/              # 3D scene and fallback
-│       │   ├── games/              # Mini-games
-│       │   ├── layout/             # Navbar, Sidebar, Footer
-│       │   └── ui/                 # Landing and UI components
-│       │
-│       ├── pages/
-│       │   ├── Dashboard
-│       │   ├── Calendar
-│       │   ├── FocusRoom
-│       │   ├── Games
-│       │   ├── Insights
-│       │   ├── Profile
-│       │   └── Settings
-│       │
-│       └── services/               # Axios and API services
+├── client/                  # React frontend
+│   ├── src/
+│   │   ├── components/      # Reusable UI components
+│   │   ├── pages/           # Application pages
+│   │   ├── services/        # API configuration
+│   │   └── ...
+│   ├── package.json
+│   └── vite.config.js
 │
-├── server/                         # Express backend
-│   ├── config/                     # Database connection
-│   ├── controllers/                # Business logic
-│   ├── middleware/                 # Authentication
-│   ├── models/                     # Mongoose schemas
-│   ├── routes/                     # API endpoints
-│   └── test/                       # E2E test suite
+├── backend/                 # Node.js backend
+│   ├── server.js
+│   ├── models/              # Database models
+│   ├── routes/              # API routes
+│   ├── controllers/         # Request handlers
+│   ├── middleware/          # Authentication middleware
+│   ├── .env                 # Local environment variables
+│   └── package.json
 │
-├── src/                            # Isolated AI Studio prototype
-│
-├── .gitignore
 └── README.md
 ```
 
-> 📌 This tree is a high-level guide. File names and exact locations should match the actual repository.
+*Note: The structure above is a representative overview. Adjust individual folders to match the actual repository.*
 
----
+## 🌐 Live Deployment
 
-## 🚀 Getting Started
+| Component | Platform | Link |
+|---|---|---|
+| Frontend | Vercel | [Launch Application ↗](https://taskflow-fullstack-lac-iota.vercel.app/) |
+| Backend | Render | [Open Backend ↗](https://taskflow-fullstack-2.onrender.com) |
+| Source Code | GitHub | [View Repository ↗](https://github.com/sayantandutta-18/Taskflow-Fullstack-) |
 
-Run TaskFlow AI locally using the following steps.
+The frontend communicates with the deployed backend through an API base URL configured using environment variables.
 
-### 📋 Prerequisites
+## ⚙️ Run Locally
 
-Install the following before starting:
+### 1. Prerequisites
 
-- [Node.js](https://nodejs.org/) — version 18 or higher, subject to the installed dependencies' requirements.
+Install the following before getting started:
+
+- [Node.js](https://nodejs.org/)
 - npm
-- [MongoDB Atlas](https://www.mongodb.com/atlas) or a local MongoDB instance.
-- Git
+- [Git](https://git-scm.com/)
+- A MongoDB database, such as MongoDB Atlas
 
-### 1️⃣ Clone the Repository
+### 2. Clone the Repository
 
 ```bash
 git clone https://github.com/sayantandutta-18/Taskflow-Fullstack-.git
 cd Taskflow-Fullstack-
 ```
 
-### 2️⃣ Configure the Backend
+### 3. Configure the Backend
 
 ```bash
-cd server
+cd backend
 npm install
 ```
 
-Create a `.env` file inside the `server/` directory:
+Create a `.env` file inside the backend directory:
 
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_strong_random_secret
-
-# Optional: enable Google Gemini integration
-GEMINI_API_KEY=your_gemini_api_key
+JWT_SECRET=your_strong_secret
 ```
 
-Replace the placeholder values with your own credentials. Never commit `.env` files to GitHub.
+Add any additional environment variables required by your implementation.
 
 Start the backend:
 
 ```bash
-npm run dev
+npm start
 ```
 
-If the development script is unavailable, use the start command defined in the server's `package.json`.
+### 4. Configure the Frontend
 
-### 3️⃣ Configure the Frontend
-
-Open a new terminal:
+Open another terminal:
 
 ```bash
 cd client
 npm install
+```
+
+Create a `.env` file inside the client directory:
+
+```env
+VITE_API_URL=https://taskflow-fullstack-2.onrender.com
+```
+
+For local backend development, use your local API URL instead.
+
+Start the frontend:
+
+```bash
 npm run dev
 ```
 
-Open the local URL printed by Vite, typically:
+Open the local URL printed by Vite, usually `http://localhost:5173`.
 
-**http://localhost:5173**
+## 🔒 Security Best Practices
 
-### 4️⃣ Verify the Application
+- Never commit `.env` files or API secrets to GitHub.
+- Use strong, unique JWT secrets.
+- Keep database credentials private.
+- Validate and authorize requests on the backend.
+- Restrict CORS to trusted frontend origins in production.
+- Never expose private API keys through frontend environment variables.
 
-- 🔐 Register a new account and log in.
-- 📝 Create and complete a task.
-- 🧩 Test subtasks and recurring tasks.
-- 📅 Check the calendar and analytics.
-- 🤖 Test AI assistance with and without a Gemini API key.
-- 🎮 Open each mini-game.
-- ⏱️ Test the Pomodoro timer.
-- 📱 Verify responsive layouts on smaller screens.
+**Important:** Variables prefixed with `VITE_` are exposed to client-side code. Never store private secrets in them.
 
----
+## 🚀 Deployment
 
-## 🧪 Automated Testing
+### Frontend — Vercel
 
-Run the end-to-end verification suite from the repository root:
+1. Import the GitHub repository into Vercel.
+2. Set the Root Directory to `client`.
+3. Select **Vite** as the framework preset.
+4. Set the Build Command to `npm run build`.
+5. Set the Output Directory to `dist`.
+6. Add `VITE_API_URL` with the deployed Render backend URL.
+7. Deploy and test the application.
 
-```bash
-node server/test/e2e_checkpoint_suite.js
-```
+### Backend — Render
 
-The suite is intended to validate:
+1. Create a new Web Service connected to the repository.
+2. Set the Root Directory to `backend`.
+3. Set the Build Command to `npm install`.
+4. Set the Start Command to `npm start`.
+5. Configure `MONGO_URI` and `JWT_SECRET` in Environment Variables.
+6. Deploy and check the service logs.
 
-| Test Area | Verification |
-|---|---|
-| 🔐 Authentication | Registration, duplicate email rejection, JWT and password hashing |
-| 🛡️ Authorization | Protected routes and user ownership isolation |
-| 📋 Task Management | Creation, subtasks, notes and recurring schedules |
-| 📦 Archive Workflow | Archive and restore lifecycle |
-| 🤖 AI Assistant | Task breakdown and daily planning |
-| 🏆 Gamification | Idempotent XP rewards |
-| 🔁 Recurrence | Automatic recurring task creation |
-| 👤 User Data | Profile and achievement persistence |
+*These settings match the package scripts shared for the backend and client. Adjust the directory names if your deployed project uses a different structure.*
 
-Run the test suite and inspect its actual output before treating these checks as passed. Some tests may require a working database and configured environment variables.
+## 🧪 Testing Checklist
 
----
+Before considering the deployment complete, verify:
 
-## 🔒 Security & Reliability
+- [ ] Frontend loads without errors.
+- [ ] User registration and login work.
+- [ ] Protected routes require authentication.
+- [ ] Tasks can be created, updated, and deleted.
+- [ ] Task filters, priorities, and search work.
+- [ ] Data persists correctly in MongoDB.
+- [ ] Frontend API requests reach the Render backend.
+- [ ] CORS and production environment variables are configured correctly.
+- [ ] The application works on desktop and mobile.
 
-Security is a core part of the TaskFlow AI design.
+## 🔮 Future Improvements
 
-- 🔑 Keep JWT secrets and database credentials on the server.
-- 🔐 Hash passwords before storing them.
-- 🛡️ Protect private API routes with authentication middleware.
-- 👤 Verify task ownership for every user-specific operation.
-- ✅ Validate and whitelist update payloads.
-- 🚫 Avoid logging credentials, passwords, and authentication tokens.
-- 🌱 Keep `.env` files out of version control.
-- 🧪 Test unauthorized access and invalid request payloads.
-- 🔄 Make reward operations idempotent to prevent duplicate XP awards.
+Potential enhancements for future versions include:
 
----
+- 🤖 AI-powered task breakdown and planning.
+- 📅 Calendar-based task scheduling.
+- ⏱️ Pomodoro focus sessions.
+- 🏆 XP, achievements, and productivity streaks.
+- 📈 Advanced analytics and productivity reports.
+- 🎮 Productivity mini-games.
+- 🌌 Enhanced interactive 3D experiences.
 
-## 🎯 Product Vision
-
-TaskFlow AI aims to bring together the essential parts of a modern productivity workflow:
-
-**Plan → Prioritize → Focus → Complete → Learn → Improve**
-
-By combining full-stack engineering, immersive 3D design, AI-assisted planning, gamification, and data-backed insights, the project explores how productivity software can become more intuitive and engaging.
-
----
-
-## 🗺️ Future Improvements
-
-Potential next steps, depending on the current implementation:
-
-- 🔔 In-app and email reminders.
-- 👥 Shared workspaces and collaborative task management.
-- 📱 Progressive Web App support.
-- 🔎 Advanced analytics and exportable reports.
-- ♿ Expanded accessibility testing.
-- 🚀 Performance monitoring and production deployment checks.
-
----
+*These are roadmap ideas unless already implemented in the current codebase.*
 
 ## 👨‍💻 Developer
 
 **Sayantan Dutta**
 
-- 🐙 GitHub: [@sayantandutta-18](https://github.com/sayantandutta-18)
+🎓 B.Tech CSE (AI & ML) Student
+
+- 💻 [GitHub](https://github.com/sayantandutta-18)
+- 🌐 [Live Project](https://taskflow-fullstack-lac-iota.vercel.app/)
 
 ---
 
-## ⭐ Support the Project
+### ⭐ Support the Project
 
-If you find TaskFlow AI interesting, consider giving the repository a ⭐ on GitHub.
+If you find TaskFlow AI useful, consider giving the repository a ⭐ on GitHub.
 
-Your feedback and suggestions can help make it better!
+**Built with ❤️, code, and a passion for productivity.**
 
----
-
-<div align="center">
-
-### 🚀 TaskFlow AI
-
-**Work Smarter. Stay Focused. Level Up.**
-
-*Built with curiosity, code, and a passion for productivity.*
-
-</div>
