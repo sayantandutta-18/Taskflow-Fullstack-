@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "dev:all": "node dev.js",
+    "dev:frontend": "npm --prefix client run dev",
+    "dev:backend": "npm --prefix server run dev",
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
