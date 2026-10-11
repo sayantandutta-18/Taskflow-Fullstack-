@@ -73,6 +73,50 @@ const taskSchema = new mongoose.Schema(
     },
 
     // ==============================
+    // Subtasks
+    // ==============================
+    subtasks: [
+      {
+        title: {
+          type: String,
+          required: true,
+          trim: true,
+        },
+        completed: {
+          type: Boolean,
+          default: false,
+        },
+      },
+    ],
+
+    // ==============================
+    // Notes & Details
+    // ==============================
+    notes: {
+      type: String,
+      maxlength: 2000,
+      default: "",
+      trim: true,
+    },
+
+    // ==============================
+    // Recurrence Rule
+    // ==============================
+    recurrence: {
+      type: String,
+      enum: ["none", "daily", "weekly", "monthly"],
+      default: "none",
+    },
+
+    // ==============================
+    // Completion Timestamp
+    // ==============================
+    completedAt: {
+      type: Date,
+      default: null,
+    },
+
+    // ==============================
     // User
     // ==============================
     user: {

@@ -23,6 +23,30 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+    xp: {
+      type: Number,
+      default: 0,
+    },
+    level: {
+      type: Number,
+      default: 1,
+    },
+    streak: {
+      type: Number,
+      default: 0,
+    },
+    lastCompletedDate: {
+      type: Date,
+      default: null,
+    },
+    achievements: [
+      {
+        id: { type: String, required: true },
+        title: { type: String, required: true },
+        description: { type: String, default: "" },
+        unlockedAt: { type: Date, default: Date.now },
+      },
+    ],
   },
   {
     timestamps: true,
